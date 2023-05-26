@@ -39,12 +39,26 @@ buttonAction[2].addEventListener("click", () => {
   }, 1000);
 });
 
-navToggle.addEventListener("click", () => {
+// navToggle.addEventListener("click", () => {
+//   if (mobileNav.style.display === "none") {
+//     mobileNav.style.display = "block";
+//     mobileNav.style.right = "0";
+//     return;
+//   } else {
+//     mobileNav.style.display = "none";
+//     mobileNav.style.right = "100%";
+//     return;
+//   }
+// });
+
+function handleToggle() {
   if (mobileNav.style.display === "none") {
     mobileNav.style.display = "block";
     mobileNav.style.right = "0";
+    return;
   } else {
     mobileNav.style.display = "none";
     mobileNav.style.right = "100%";
+    return;
   }
-});
+}
