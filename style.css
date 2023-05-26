@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: rgb(3, 113, 68);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-navbar {
+  height: 80px;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 70px;
+  align-items: center;
+  position: relative;
+}
+
+.logo-navbar {
+  margin-top: 30px;
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.navigation ul li {
+  cursor: pointer;
+}
+
+.nav-toggle {
+  z-index: 3;
+  font-size: larger;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+.container-navbar .mobile-nav {
+  overflow: auto;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  width: calc(100% / 2);
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  display: none;
+}
+
+.container-navbar .mobile-nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: larger;
+  color: var(--primary-color);
+  font-weight: bold;
+  gap: 50px;
+  flex: 1 1;
+}
+
+.container-navbar .mobile-nav ul li {
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: 1px solid var(--primary-color);
+}
+
+.hero-section {
+  width: 100%;
+  height: calc(100vh - 80px);
+  align-items: center;
+  background-color: white;
+  display: flex;
+  padding: 0 70px;
+}
+
+.text-section {
+  width: calc(100% / 2);
+}
+
+.text-section h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.text-section h1 span {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.text-section p {
+  margin-bottom: 24px;
+}
+
+.text-section a {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 13px;
+  padding: 6px 12px;
+  width: 40px;
+  border-radius: 24px;
+  font-weight: 500;
+  user-select: none;
+  transition: all 200ms ease-in-out;
+}
+
+.text-section a:hover {
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  transform: rotate(100deg);
+}
+
+.image-section {
+  width: calc(100% / 2);
+  position: relative;
+}
+
+.image-section .starbucks {
+  position: fixed;
+  top: 200px;
+  right: 200px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+  user-select: none;
+}
+
+.image-section .rounded {
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: fixed;
+  right: -400px;
+  bottom: -400px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  right: -24px;
+  z-index: 1;
+}
+
+.social-media img {
+  width: 30px;
+  height: auto;
+  filter: invert(100%);
+}
+
+.hero-action {
+  display: flex;
+  gap: 30px;
+  position: fixed;
+  z-index: 1;
+  bottom: 10px;
+  left: calc(50% - 150px);
+}
+
+.hero-action button {
+  background: none;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+
+.hero-action button img {
+  width: 70px;
+}
+
+.hero-action button:hover {
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
+.perkecil-doger {
+  width: 400px;
+}
+
+@media (max-width: 1200px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .image-section .starbucks {
+    width: 370px;
+  }
+
+  .perkecil-doger {
+    width: 340px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .image-section .starbucks {
+    width: 320px;
+  }
+
+  .perkecil-doger {
+    width: 290px;
+  }
+
+  .image-section .rounded {
+    width: 700px;
+    height: 700px;
+    right: -250px;
+    bottom: -250px;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .image-section .starbucks {
+    width: 270px;
+    position: fixed;
+    top: 250px;
+    right: 50px;
+  }
+
+  .image-section .rounded {
+    width: 600px;
+    height: 600px;
+    right: -180px;
+    bottom: -160px;
+  }
+} */
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .navigation {
+    display: none;
+  }
+
+  .container-navbar {
+    padding: 5px 24px;
+  }
+
+  .container-navbar .logo-navbar {
+    width: 50px;
+    margin-top: 0;
+  }
+
+  .hero-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px - 100px);
+  }
+
+  .social-media {
+    display: none;
+  }
+
+  .image-section {
+    width: 100%;
+  }
+
+  .image-section .rounded {
+    display: block;
+    position: fixed;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .image-section .starbucks {
+    width: 220px;
+    position: fixed;
+    right: 0;
+    top: 500px;
+  }
+  .text-section {
+    width: 100%;
+  }
+
+  .text-section h1 {
+    font-size: 25px;
+  }
+
+  .text-section h1 span {
+    font-size: 30px;
+  }
+
+  .container-navbar .mobile-nav {
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    right: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    display: none;
+    transition: all 200ms ease-in-out;
+  }
+
+  .container-navbar .mobile-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color: var(--primary-color);
+    font-weight: bold;
+    gap: 50px;
+    flex: 1 1;
+  }
+
+  .container-navbar .mobile-nav ul li {
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 1px solid var(--primary-color);
+  }
+}
